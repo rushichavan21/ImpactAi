@@ -24,7 +24,7 @@ export default function HomeScreen() {
                     } else {
                         Alert.alert("No Plan Generated", "The AI couldn't generate a plan from your audio.");
                     }
-                } catch (error) {
+                } catch {
                     Alert.alert("Error", "Failed to upload audio or generate plan.");
                 } finally {
                     setIsLoading(false);
@@ -37,10 +37,10 @@ export default function HomeScreen() {
     };
 
     return (
-        <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
+        <SafeAreaView style={{ flex: 1, backgroundColor: '#09090b' }}>
             <View style={{ flex: 1, alignItems: 'center', paddingTop: 40 }}>
-                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#111827', marginBottom: 8 }}>ImpactAi</Text>
-                <Text style={{ color: '#6B7280', marginBottom: 32 }}>Plan your day with your voice</Text>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: '#fafafa', marginBottom: 8 }}>ImpactAi</Text>
+                <Text style={{ color: '#a1a1aa', marginBottom: 32 }}>Plan your day with your voice</Text>
 
                 <View style={{ height: 256, justifyContent: 'center', alignItems: 'center' }}>
                     {isLoading ? (

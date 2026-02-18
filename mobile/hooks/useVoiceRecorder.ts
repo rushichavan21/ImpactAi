@@ -26,7 +26,7 @@ export const useVoiceRecorder = () => {
   }, []);
 
   useEffect(() => {
-    let interval: NodeJS.Timeout;
+    let interval: any;
     if (state.isRecording && recording) {
         interval = setInterval(async () => {
             const status = await recording.getStatusAsync();
